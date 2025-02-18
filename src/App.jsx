@@ -3,6 +3,7 @@ import MainTitle from "../Components/MainTitle";
 import ContactUs from "../Components/ContactUs"
 import Home from "../Components/Home"
 import "./index.css"
+import SingleArticle from "../Components/SingleArticle";
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
     <MainTitle/>
     </div>
     <Routes>
-        <Route path="/articles" element={<Home  />} />
+        <Route path="/articles" element={<Home/>} />
+        <Route path="/articles/:articleId" element={<SingleArticle/>}/>
       </Routes>
       <div>
         <ContactUs/>
