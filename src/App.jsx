@@ -2,14 +2,14 @@ import { Routes, Route} from "react-router-dom";
 import MainTitle from "../Components/MainTitle";
 import ContactUs from "../Components/ContactUs"
 import Home from "../Components/Home"
-import "../src/assets/"
+import "./index.css"
 
 function App() {
 
   
   return (
     <>
-    <div>
+    <div className="title-container">
     <MainTitle/>
     </div>
     <Routes>
