@@ -1,16 +1,25 @@
-const cors = require('cors');
-import './App.css'
+import { Routes, Route} from "react-router-dom";
+import MainTitle from "../Components/MainTitle";
+import ContactUs from "../Components/ContactUs"
+import Home from "../Components/Home"
 
 
 function App() {
 
-  app.use(cors());
+  
   return (
     <>
-    
-    <h1>NC NEWS</h1>
+    <div>
+    <MainTitle/>
+    </div>
+    <Routes>
+        <Route path="/articles" element={<Home  />} />
+      </Routes>
+      <div>
+        <ContactUs/>
+      </div>
     </>
   )
 }
 
-export default App
+export default App;
