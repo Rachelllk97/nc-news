@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import ArticleCard from "./ArticleCard"
 import getArticles from "./getArticles"
 import { useState, useEffect} from "react";
+import CommentsSection from "./CommentsSection";
 
 
 const SingleArticle = () => {
@@ -25,6 +26,15 @@ const SingleArticle = () => {
         <div className="single-article-container">
         {article ? (
              <ArticleCard  article={article}/>
+        ) : (
+            <p>Loading...</p>
+        )
+    }
+    </div>
+    <div >
+    {article ? (
+        
+             <CommentsSection articleId = {articleId} />
         ) : (
             <p>Loading...</p>
         )
