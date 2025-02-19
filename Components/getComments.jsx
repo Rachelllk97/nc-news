@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-
-
 const getComments= (articleId) => {
     const commentsURL = `https://nc-news-rk.onrender.com/api/articles/${articleId}/comments`
 

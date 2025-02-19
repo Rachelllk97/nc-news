@@ -29,8 +29,10 @@ useEffect(() => {
                     <div key={index} >
                         <p className="comment"><strong>{comment.author}</strong> {comment.body}</p>
                     </div>
+            
                 ))
             )}
+            
         </section>
 
     )
