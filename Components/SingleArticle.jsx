@@ -3,6 +3,7 @@ import ArticleCard from "./ArticleCard"
 import getArticles from "./getArticles"
 import { useState, useEffect} from "react";
 import CommentsSection from "./CommentsSection";
+import Votes from "./"
 
 
 const SingleArticle = () => {
@@ -35,6 +36,15 @@ const SingleArticle = () => {
     {article ? (
         
              <CommentsSection articleId = {articleId} />
+        ) : (
+            <p>Loading...</p>
+        )
+    }
+    </div>
+    <div >
+    {article ? (
+        
+             <Votes article = {article} />
         ) : (
             <p>Loading...</p>
         )
