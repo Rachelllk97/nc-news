@@ -100,3 +100,28 @@ body {
   text-align: center;
   padding: 1rem;
 }
+
+.comment-section-container{
+  display:grid;
+  flex-direction:row;
+  align-items:baseline;
+  width: 90vw; 
+  max-width: 1100px; 
+  text-align:left;
+  padding: 1rem;
+  background-color: rgb(244, 12, 221);
+  border-radius: 0.5rem;
+}
+
+.comment{
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.comment-title{
+  background-color: white;
+  color: rgb(244, 12, 221);
+  border-radius: 0.5rem;
+  padding: 10px;
+}

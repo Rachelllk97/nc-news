@@ -9,6 +9,7 @@ return (
                 </Link>
                     <p><strong>Topic: </strong>{article.topic}</p>
                     <p><strong>Author: </strong> {article.author}</p>
+                    <p><strong>Comment count: </strong> {article.comment_count}</p>
                     <p><strong>Body: </strong> {article.body}</p>
             </section>
 
