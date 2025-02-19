@@ -3,12 +3,13 @@ import ArticleCard from "./ArticleCard"
 import getArticles from "./getArticles"
 import { useState, useEffect} from "react";
 import CommentsSection from "./CommentsSection";
-import Votes from "./"
+import Votes from "./Votes";
 
 
 const SingleArticle = () => {
     const [article, setArticle] = useState(null)
     const {articleId} = useParams()
+    const [votes, setVotes] = useState(0)
 
     useEffect(() => {
         getArticles()
@@ -17,10 +18,12 @@ const SingleArticle = () => {
                 (article) => article.article_id === parseInt(articleId)
             )
             setArticle(article)
+            setVotes(article ? article.votes : 0);
         }).catch((error) => {
             console.log(error)
         })
     }, [articleId])
+
 
     return(
         <>
@@ -44,7 +47,7 @@ const SingleArticle = () => {
     <div >
     {article ? (
         
-             <Votes article = {article} />
+             <Votes votes={votes} setVotes={setVotes} articleId={articleId} />
         ) : (
             <p>Loading...</p>
         )
