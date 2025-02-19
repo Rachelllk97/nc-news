@@ -26,7 +26,7 @@ const Votes = ({votes, setVotes, articleId}) => {
 return (
     <>
         <div className="votes-container" >
-    <p><strong>Votes: {votes}</strong></p>
+    <p className="votes-title"><strong>Votes: {votes}</strong></p>
     <p>{error}</p>
     <button className= "votes-button" onClick={() => handleVote(1)}><strong>Vote</strong></button>
     <button className= "votes-button" onClick={() => handleVote(-1)}><strong>Remove Vote</strong></button>

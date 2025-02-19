@@ -4,6 +4,7 @@ import getArticles from "./getArticles"
 import { useState, useEffect} from "react";
 import CommentsSection from "./CommentsSection";
 import Votes from "./Votes";
+import PostComment from "./PostComment";
 
 
 const SingleArticle = () => {
@@ -37,8 +38,11 @@ const SingleArticle = () => {
     </div>
     <div >
     {article ? (
-        
-             <CommentsSection articleId = {articleId} />
+        <>
+         <CommentsSection articleId = {articleId} />
+        <PostComment articleId = {articleId} />
+        </>
+
         ) : (
             <p>Loading...</p>
         )
