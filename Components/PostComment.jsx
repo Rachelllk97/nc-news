@@ -1,11 +1,9 @@
 import {React, useState, useEffect} from "react"
 import axios from "axios"
-import { useParams } from "react-router-dom"
 
 const PostComment = ({articleId}) => {
     const [body, setBody] = useState("")
-    const [username, setUsername] = useState("")
-    const [comment, setComment] = useState("")
+    const [username, setUsername] = useState("grumpy19")
     const [error, setError] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null);
    const  commentURL = `https://nc-news-rk.onrender.com/api/articles/${articleId}/comments`
